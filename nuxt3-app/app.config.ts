@@ -1,3 +1,4 @@
+// 配置网页
 export default defineAppConfig({
     title: 'Hello Nuxt',
     theme: {

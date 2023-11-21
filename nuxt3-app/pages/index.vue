@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- <h1>欢迎来到首页</h1>
-    <AppAlert> 这是一个自动导入的组件。 </AppAlert> -->
-    路由index
+    <h1>首页</h1>
+    <NuxtLink to="/page1">page1</NuxtLink>
+    <NuxtLink to="/store">store</NuxtLink>
   </div>
 </template>
-  

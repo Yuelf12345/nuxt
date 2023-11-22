@@ -1,10 +1,13 @@
 <template>
   <div>
-    <h4>姓名:{{ person.name }}</h4>
-    <h4>年龄:{{ person.age }}</h4>
+    <h1>store1</h1>
+    <h4>姓名:{{ userInfo.name }}</h4>
+    <h4>年龄:{{ userInfo.age }}</h4>
+      <button @click="setAge(+1)">+</button>
+      <button @click="setAge(-1)">-</button>
   </div>
 </template>
 
 <script setup lang="ts">
-const person = usePerson()
+const {userInfo,setAge} = usePerson()
 </script> 

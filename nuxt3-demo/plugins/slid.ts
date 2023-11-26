@@ -15,12 +15,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       }
     }
   });
-  const isBelowViewport = (el:any) => {
+  const isBelowViewport = (el: any) => {
     const rect = el.getBoundingClientRect();
     console.log(rect.top - DISTANCE > window.innerHeight);
     return rect.top - DISTANCE > window.innerHeight;
   };
-  nuxtApp.vueApp.directive('slidIn', {
+  nuxtApp.vueApp.directive('slid', {
     mounted(el) {
       if (!isBelowViewport(el)) {
         return;
@@ -50,7 +50,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       ob.unobserve(el);
     },
     getSSRProps(binding, vnode) {
-      return {}
+      return {
+        isBelowViewport: isBelowViewport(vnode.el)
+      }
     }
   })
 })

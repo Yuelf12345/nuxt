@@ -50,8 +50,8 @@ const navItems = ref([
 ]);
 const isActive = ref<number>(0);
 const handleActive = (item, index: number) => {
-  console.log("item", item);
   isActive.value = index;
+  navigateTo(item.path);
 };
 </script>
 <style lang="scss" scoped>
@@ -70,6 +70,7 @@ nav ul li a {
   text-decoration: none;
 }
 .main-menu {
+  cursor: pointer;
   min-height: 100vh;
   overflow: hidden;
   background: rgb(73, 57, 113);

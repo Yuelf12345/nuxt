@@ -3,6 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.scss'],
   plugins: [
-    { src: '~/plugins/slidIn', mode: 'client' },
-  ],
+    { src: '~/plugins/slid', mode: 'client' },
+  ]
 })

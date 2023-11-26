@@ -26,7 +26,7 @@
           <div class="calendar">
             <div
               class="day-and-activity activity-one"
-              v-slid-in
+              v-slid
               v-for="i in 9"
               :key="i"
             >

@@ -17,7 +17,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
   const isBelowViewport = (el: any) => {
     const rect = el.getBoundingClientRect();
-    console.log(rect.top - DISTANCE > window.innerHeight);
     return rect.top - DISTANCE > window.innerHeight;
   };
   nuxtApp.vueApp.directive('slid', {
